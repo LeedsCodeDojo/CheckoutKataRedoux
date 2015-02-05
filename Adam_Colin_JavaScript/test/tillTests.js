@@ -1,16 +1,7 @@
-//var assert = require('assert');
-var myService = require('./../services/myService');
+var assert = require('assert');
 var Till = require('./../services/till.js');
 
-exports.testHelloWorld = function(test){
-  test.expect(1);
-
-  test.equal('Hello World!', myService.helloWorld());
-  
-  test.done();
-};
-
-exports.till = function(test){
+exports.givenAnEmptyTill_TheTotalShouldBe0Pence = function(test){
   assertProductsTotal(test, [],0);
 };
 
